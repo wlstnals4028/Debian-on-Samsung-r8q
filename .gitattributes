@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.patch text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.service text eol=lf
+*.timer text eol=lf
+*.network text eol=lf

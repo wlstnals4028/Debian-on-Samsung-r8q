@@ -1,0 +1,10 @@
+[Unit]
+Description=Switch r8q USB to NCM after boot
+
+[Timer]
+OnBootSec=20s
+AccuracySec=1s
+Unit=r8q-usb-ncm.service
+
+[Install]
+WantedBy=timers.target

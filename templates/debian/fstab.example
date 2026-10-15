@@ -1,0 +1,5 @@
+# Replace the userdata UUID and verify every partition name before use.
+UUID=REPLACE_WITH_USERDATA_UUID / ext4 defaults,noatime,errors=remount-ro 0 0
+/dev/sda20 /vendor/firmware_mnt vfat ro,nofail 0 0
+/dev/sda21 /vendor/dsp ext4 ro,noload,nofail 0 0
+/dev/sda8 /mnt/vendor/persist ext4 ro,noload,nofail 0 0

@@ -1,0 +1,11 @@
+[Unit]
+Description=Switch r8q USB networking to NCM
+After=systemd-udev-trigger.service systemd-networkd.service
+ConditionPathExists=/config/usb_gadget/native/functions/rndis.usb0
+
+[Service]
+Type=oneshot
+ExecCondition=/bin/sh -c 'test ! -L /config/usb_gadget/native/configs/c.1/ncm.usb0'
+ExecStart=/usr/local/sbin/r8q-usb-mode ncm
+TimeoutStartSec=30
+RemainAfterExit=yes
